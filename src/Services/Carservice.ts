@@ -1,7 +1,5 @@
-/* import AutoFactory from '../Domains/AutoFactory'; */
 import Car from '../Domains/Car';
 import ICar from '../Interfaces/ICar';
-/* import ICarMongo from '../Interfaces/ICarMongo'; */
 import CarModel from '../Models/Car';
 
 export default class CarService {
@@ -22,5 +20,18 @@ export default class CarService {
     } 
     const createdBD = await this.carros.create({ ...obj, status: false });
     return this.createCarDomain(createdBD);
+  }
+
+  public async getAllAndId(id: string | undefined) {
+    if (!id) {
+      const returnDB = await this.carros.getAll();
+      return returnDB.map((elem) => this.createCarDomain(elem));
+    } 
+    try {
+      const returnDB = await this.carros.findById(id);
+      return this.createCarDomain(returnDB);
+    } catch (error) {
+      return 'Deu Erro';
+    }
   }
 }
