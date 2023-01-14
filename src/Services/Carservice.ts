@@ -1,11 +1,11 @@
 import Car from '../Domains/Car';
 import ICar from '../Interfaces/ICar';
-import CarModel from '../Models/Car';
+import CarModel from '../Models/CarModel';
 
 export default class CarService {
   private carros = new CarModel();
 
-  private createCarDomain(car: ICar | null): Car | null {
+  createCarDomain(car: ICar | null): Car | null {
     if (car) {
       return new Car(car);
     }
@@ -13,7 +13,6 @@ export default class CarService {
   }
 
   public async create(obj: ICar) {
-    /* const car = AutoFactory.create(obj); */
     if ('status' in obj) {
       const createBD = await this.carros.create(obj);
       return this.createCarDomain(createBD);

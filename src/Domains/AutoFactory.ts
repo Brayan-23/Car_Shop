@@ -1,4 +1,4 @@
-import ICar from '../Interfaces/ICar';
+/* import ICar from '../Interfaces/ICar';
 import Car from './Car';
 
 export default class AutoFactory {
@@ -6,4 +6,4 @@ export default class AutoFactory {
     const result = new Car({ ...obj });
     return result;
   }
-}
+} */

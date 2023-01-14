@@ -1,4 +1,4 @@
-import { IAuto } from './IAuto';
+import { IAuto } from '../Interfaces/IAuto';
 
 export default class Auto {
   protected id?: string | undefined;
