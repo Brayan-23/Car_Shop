@@ -83,4 +83,22 @@ describe('Testes refentes a Service Car', function () {
     
     expect(returnMock).to.be.equal(null);
   });
+
+  it('Testa o retorna da função updateId', async function () {
+    Sinon.stub(Model, 'findByIdAndUpdate').resolves(mockCar[0]);
+    Sinon.stub(Model, 'findById').resolves(mockCar[0]);
+
+    const serviceCar = new CarService();
+    const returnMock = await serviceCar.updateId('11111111', mockSemStatus);
+    
+    expect(returnMock).to.deep.equal(mockCar[0]);
+  });
+  it('Testa o retorna de um erro ao tentar atualizar um carro com id inválido', async function () {
+    Sinon.stub(Model, 'findByIdAndUpdate').throws(new Error());
+
+    const serviceCar = new CarService();
+    const returnMock = await serviceCar.updateId('56664656744654', mockSemStatus);
+    
+    expect(returnMock).to.be.equal('Deu Erro');
+  });
 });
