@@ -25,8 +25,8 @@ export default abstract class AutoODM<T> {
     const result = await this._model.findById(id);
     return result;
   }
-  async updatedId(id: string, obj: T): Promise<T | null> {
-    const result = await this._model.findByIdAndUpdate({ id }, { obj });
+  async updatedId(id: string, obj: Partial<T>): Promise<T | null> {
+    const result = await this._model.findByIdAndUpdate(id, obj);
     return result;
   }
 }

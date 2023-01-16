@@ -33,4 +33,13 @@ export default class CarService {
       return 'Deu Erro';
     }
   }
+  public async updateId(id: string, obj: ICar) {
+    try {
+      await this.carros.updatedId(id, obj);
+      const result = await this.carros.findById(id);
+      return this.createCarDomain(result);
+    } catch (error) {
+      return 'Deu Erro';
+    }
+  }
 }
