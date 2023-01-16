@@ -1,13 +1,8 @@
-export interface IAuto {
+export default interface IVehicle {
   id?: string,
   model: string,
   year: number,
   color: string,
   status?: boolean | undefined,
   buyValue: number 
-}
-
-export interface ISpecific {
-  doorsQty: number,
-  seatsQty: number,
 }

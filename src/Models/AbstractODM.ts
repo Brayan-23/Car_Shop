@@ -1,6 +1,6 @@
 import { Model, Schema, models, model } from 'mongoose';
 
-export default abstract class AutoODM<T> {
+export default abstract class AbstractODM<T> {
   private schema: Schema<T>;
   private _model: Model<T>;
   private modelName: string;

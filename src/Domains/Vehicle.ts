@@ -1,6 +1,6 @@
-import { IAuto } from '../Interfaces/IAuto';
+import IVehicle from '../Interfaces/IVehicle';
 
-export default class Auto {
+export default class Vehicle {
   protected id?: string | undefined;
   protected model: string;
   protected year: number;
@@ -8,7 +8,7 @@ export default class Auto {
   protected status: boolean | undefined;
   protected buyValue: number;
  
-  constructor(obj: IAuto) {
+  constructor(obj: IVehicle) {
     this.model = obj.model;
     this.year = obj.year;
     this.color = obj.color;
