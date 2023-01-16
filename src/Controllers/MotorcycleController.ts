@@ -18,4 +18,15 @@ export default class MotorController {
     const result = await this.motorService.create({ ...body });
     return this.res.status(201).json(result);
   }
+
+  public async getAllAndId() {
+    const { id } = this.req.params;
+    const result = await this.motorService.getAllAndId(id);
+    if (result === 'Deu Erro') {
+      return this.res.status(422).json({ message: 'Invalid mongo id' });
+    } if (result === null) {
+      return this.res.status(404).json({ message: 'Motorcycle not found' });
+    }
+    return this.res.status(200).json(result);
+  }
 }

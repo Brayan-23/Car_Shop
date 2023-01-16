@@ -20,4 +20,17 @@ export default class MotorService {
     const createdBD = await this.motos.create({ ...obj, status: false });
     return this.createMotorDomain(createdBD);
   }
+
+  public async getAllAndId(id: string | undefined) {
+    if (!id) {
+      const returnDB = await this.motos.getAll();
+      return returnDB.map((elem) => this.createMotorDomain(elem));
+    } 
+    try {
+      const returnDB = await this.motos.findById(id);
+      return this.createMotorDomain(returnDB);
+    } catch (error) {
+      return 'Deu Erro';
+    }
+  }
 }

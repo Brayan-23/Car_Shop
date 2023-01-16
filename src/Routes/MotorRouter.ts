@@ -10,16 +10,16 @@ motorRouter.post(
 /* motorRouter.put(
   '/:id', 
   (req, res, next) => new CarController(req, res, next).updateId(),
-);
+); */
 
 motorRouter.get(
   '/', 
-  (req, res, next) => new CarController(req, res, next).getAllAndId(),
+  (req, res, next) => new MotorController(req, res, next).getAllAndId(),
 );
 
 motorRouter.get(
   '/:id', 
-  (req, res, next) => new CarController(req, res, next).getAllAndId(),
-); */
+  (req, res, next) => new MotorController(req, res, next).getAllAndId(),
+);
 
 export default motorRouter;
