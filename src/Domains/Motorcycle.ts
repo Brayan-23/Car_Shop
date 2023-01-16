@@ -1,7 +1,7 @@
 import IMotocycle from '../Interfaces/IMotorcycle';
 import Vehicle from './Vehicle';
 
-export default class Motorcycles extends Vehicle {
+export default class Motorcycle extends Vehicle {
   private category: string;
   private engineCapacity: number;
 
@@ -16,5 +16,12 @@ export default class Motorcycles extends Vehicle {
     });
     this.category = obj.category;
     this.engineCapacity = obj.engineCapacity;
+  }
+
+  getCategory() {
+    return this.category;
+  }
+  getEngineCapacity() {
+    return this.engineCapacity;
   }
 }

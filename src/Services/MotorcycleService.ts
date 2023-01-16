@@ -1,6 +1,6 @@
 import IMotorcycle from '../Interfaces/IMotorcycle';
 import MotorcycleModel from '../Models/MotocycleModel';
-import Motorcycles from '../Domains/Motorcycles';
+import Motorcycles from '../Domains/Motorcycle';
 
 export default class MotorService {
   private motos = new MotorcycleModel();
