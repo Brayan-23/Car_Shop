@@ -7,10 +7,10 @@ motorRouter.post(
   '/', 
   (req, res, next) => new MotorController(req, res, next).create(),
 );
-/* motorRouter.put(
+motorRouter.put(
   '/:id', 
-  (req, res, next) => new CarController(req, res, next).updateId(),
-); */
+  (req, res, next) => new MotorController(req, res, next).updateId(),
+);
 
 motorRouter.get(
   '/', 

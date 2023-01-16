@@ -33,4 +33,14 @@ export default class MotorService {
       return 'Deu Erro';
     }
   }
+
+  public async updateId(id: string, obj: IMotorcycle) {
+    try {
+      await this.motos.updatedId(id, obj);
+      const result = await this.motos.findById(id);
+      return this.createMotorDomain(result);
+    } catch (error) {
+      return 'Deu Erro';
+    }
+  }
 }
