@@ -27,7 +27,7 @@ Nste projeto, apliquei os princípios de Programação Orientada a Objetos (POO)
 - *Clonar o repositório:*
 
 ```
-$ git clone git@github.com:mathews-r/carshopMongodb.git
+$ git clone git@github.com:Brayan-23/Car_Shop.git
 ```
 
 - *Acessar o projeto CarShop:*
