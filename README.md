@@ -43,7 +43,3 @@ $ npm install
 
 utilizar o comando docker-compose up -d para iniciar os containers
 ```
-
-## 👨‍💻 Desenvolvedor
-
-- [Mathews Rodrigues](https://www.linkedin.com/in/mathewsrodrigues/)
