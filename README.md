@@ -33,7 +33,7 @@ $ git clone git@github.com:Brayan-23/Car_Shop.git
 - *Acessar o projeto CarShop:*
 
 ```
-$ cd carshopMongodb
+$ cd Car_Shop
 ```
 
 - *Instalar dependências:*
